@@ -4,11 +4,10 @@ services:
 
   gofractal-node:
 
-    image: ellevix/fractald:0.3.0
-
+    build: ../docker
     container_name: gofractal-node
 
-    restart: always
+    restart: unless-stopped
 
     ports:
       - "32126:32126"
@@ -16,9 +15,14 @@ services:
     volumes:
       - fractal-data:/data
       - /var/lib/5tratumos/pool:/pool
+      - ../scripts:/scripts
 
     command: >
-      sh -c "/scripts/register_coin.sh && bitcoind -datadir=/data"
-
+      sh -c "
+      chmod +x /scripts/register_coin.sh &&
+      /scripts/register_coin.sh &&
+      bitcoind -datadir=/data
+      "
+      
 volumes:
   fractal-data:
