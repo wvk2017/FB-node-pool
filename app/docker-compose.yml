@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+
+  gofractal-node:
+
+    image: ellevix/fractald:0.3.0
+
+    container_name: gofractal-node
+
+    restart: always
+
+    ports:
+      - "32126:32126"
+
+    volumes:
+      - fractal-data:/data
+      - /var/lib/5tratumos/pool:/pool
+
+    command: >
+      sh -c "/scripts/register_coin.sh && bitcoind -datadir=/data"
+
+volumes:
+  fractal-data:
