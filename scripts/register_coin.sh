@@ -16,7 +16,7 @@ cat > $POOL_DIR/fractal.json <<EOF
       "username": "fractal",
       "password": "-k-moe0BzJXTjvIHgmZMdTIe",
       "zmq_enabled": true,
-      "zmq_hashblock": "tcp://gofractal-node:32125"
+      "zmq_hashblock": "tcp://fractal-node:32125"
     },
 
     "stratum": {
@@ -26,9 +26,9 @@ cat > $POOL_DIR/fractal.json <<EOF
     },
 
     "mining": {
-      "address": "1Cq7z4q4NfKFF43aSdJAYh5PN5vMFHSZ4D",
+      "address": "bc1qp05vuzc5x4ym3cujh666xm6mzh0q6yqmkmtndl",
       "network": "mainnet",
-      "coinbase_text": "GoStrataCore"
+      "coinbase_text": "ckpool wvk2017"
     },
 
     "vardiff": {
