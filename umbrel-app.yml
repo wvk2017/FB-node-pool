@@ -4,7 +4,7 @@ name: fb pool
 tagline: fb pool Pool App
 icon: https://miningpoolstats.stream/ico/fractalbitcoin.webp
 category: SOLO Crypto Mining
-version: "1.8.1"
+version: "2.0.0"
 port: 8560
 description: |
   MiningCore Mining Pool App. For a full functioning app, you will also need to install one or more nodes and configure the Pool Config JSON file manually by SSHing into your Umbrel server.
@@ -16,13 +16,13 @@ description: |
 developer: wvk2017
 website: http://wvk2017
 submitter: wvk2017
-submission: 
-repo: 
-support: 
-gallery:
+submission: https://
+repo: https://
+support: https://
+gallery: https://
   - 
 releaseNotes: 
-  2026.02.25 - Added Nerdminer and High Hashrate Device Support for SHA256
+  2026.02.25 - fb node solo mining for SHA256
 dependencies: []
 path: ""
 defaultUsername: ""
