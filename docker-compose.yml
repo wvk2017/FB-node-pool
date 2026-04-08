@@ -4,7 +4,7 @@ services:
 
   gofractal-node:
 
-    build: ./docker
+    build: wvk2017/fb
     container_name: gofractal-node
 
     restart: unless-stopped
