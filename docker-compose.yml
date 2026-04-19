@@ -13,15 +13,17 @@ services:
       - "32126:32126"
 
     volumes:
-      - fractal-data:/data
-      - /var/lib/5tratumos/pool:/pool
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/data/pool/www:/www
+      - ${APP_DATA_DIR}/data/node:/data
+      - ${APP_DATA_DIR}/data/templates/bitcoind-entrypoint.sh:/bitcoind-entrypoint.sh:ro
       - ./scripts:/scripts
 
     command: >
       sh -c "
       chmod +x /scripts/register_coin.sh &&
       /scripts/register_coin.sh &&
-      fractald -datadir=/data
+      bitcoind -datadir=/data
       "
 
 volumes:
